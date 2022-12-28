@@ -1,0 +1,1 @@
+Local storage, cookies, sqlite
