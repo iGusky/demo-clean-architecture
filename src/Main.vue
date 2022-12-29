@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import useMatter from './domains/composables/useMatter';
+import useMatter from './ui/composables/useMatter';
 import {useMatterStore} from './data/core/local/pinia/useMatterStore'
 import { useRouter } from 'vue-router';
 
 const { matterList } = useMatter()
 const localRouter = useRouter()
 const matterStore = useMatterStore()
-
-
-sessionStorage.getItem('selectedMatter');
 </script>
 
 <template>

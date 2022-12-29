@@ -1,6 +1,6 @@
 import { ref } from "vue"
-import { mapMatterList } from "../interactors/MatterMapper"
-import { MatterModel } from "../models/MatterModel"
+import { mapMatterList } from "../../domains/interactors/MatterMapper"
+import { MatterModel } from "../../domains/models/MatterModel"
 
 const useMatter = () => {
   // Variables
