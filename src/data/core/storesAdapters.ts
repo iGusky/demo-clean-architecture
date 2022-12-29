@@ -1,5 +1,5 @@
-import { useMatterStore } from "./local/pinia/MatterStore";
+import { matterStore } from "./local/pinia/MatterStore";
 
-const matterStore = useMatterStore()
+// const matterStore = matterStore()
 
 export {matterStore}

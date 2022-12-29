@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import useMatter from './domains/composables/useMatter';
-import { useMatterStore } from './data/core/local/pinia/MatterStore'
-const { selectedMatter, isMatterSelected, setSelectedMatter }= useMatterStore() 
+import { matterStore } from './data/core/local/pinia/MatterStore'
+const matterStoreObject = matterStore() 
 const { matterList } = useMatter()
 </script>
 
 <template>
   <h1>Lista de materias</h1>
-  <h3 v-if="isMatterSelected">
-    Materia seleccionada: {{ selectedMatter.name }}
-  </h3>matter
+  <h3 v-if="matterStoreObject.isMatterSelected">
+    Materia seleccionada: {{ matterStoreObject.selectedMatter.name }}
+  </h3>
 
   <div class="matter-list">
     <div v-for="(matter, index) in matterList" :key="index">
     <ul 
       class="matter-list-properties" 
-      @click="setSelectedMatter(matter)"
+      @click="() => matterStoreObject.setSelectedMatter(matter)"
     >
       <li>ID: {{ matter.id }}</li>
       <li>Nombre: {{ matter.name }}</li>
