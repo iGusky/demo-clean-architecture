@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { MatterModel } from '../../../domains/models/MatterModel';
+import { MatterModel } from '../../../../domains/models/MatterModel';
 import { computed, ref } from 'vue';
 export const useMatterStore = defineStore('materia',() => {
   const selectedMatter = ref<MatterModel>({

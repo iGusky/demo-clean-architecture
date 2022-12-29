@@ -1,4 +1,4 @@
-import { useMatterStore } from "./local/MatterStore";
+import { useMatterStore } from "./local/pinia/MatterStore";
 
 const matterStore = useMatterStore()
 
