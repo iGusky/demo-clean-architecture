@@ -4,21 +4,16 @@ import Api from "@/Data/Network/Api";
 
 export default  {
 
-    get: function (options: ApiOptions) : MatterResponse[] {
-        let response: MatterResponse[] = []
+    getAll: function (options: ApiOptions) : MatterResponse[] {
+        let response : Array<MatterResponse> = new Array<MatterResponse>()
 
         Api(options).get('/v1/catalogs/matter/get/all').then((axiosResponse) => {
             axiosResponse.data.data.map((row: MatterResponse) => {
-                response.push(row)
+                response.push(row as MatterResponse)
             })
         })
 
         return response
-    },
-
-    getAll: async function (options: ApiOptions) {
-        const response = await Api(options).get('/v1/catalogs/matter/get/all');
-        return response.data.data as MatterResponse[]
     }
 
 }

@@ -1,9 +1,6 @@
 <script lang="ts" setup>
 
 import MatterComposable from "@/UI/views/composables/MatterComposable";
-import MatterRepository from "@/Data/Network/Repositories/MatterRepository";
-
-console.log(MatterRepository.get({token : '132|SzbUeGOT27Lyl6IomEkrqVw0vDEqvQDIZvCNFars'}))
 
 const listOfMatters = MatterComposable.getAllMatter()
 
