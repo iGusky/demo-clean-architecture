@@ -17,10 +17,7 @@ export default {
     },
 
     toModels : function (response : MatterResponse[]): MatterModel[] {
-        console.log(response)
         return response.map((matter: MatterResponse) => {
-            console.log("a")
-            console.log(matter)
             return this.toModel(matter)
         }) as MatterModel[]
     }

@@ -3,8 +3,8 @@ import MatterIterator from "@/Domain/Iterators/MatterIterator";
 
 export default {
 
-    getAll() {
-        const getData = MatterRepository.getAll({token : '132|SzbUeGOT27Lyl6IomEkrqVw0vDEqvQDIZvCNFars'})
+    async getAll() {
+        const getData = await MatterRepository.getAll({token : '132|SzbUeGOT27Lyl6IomEkrqVw0vDEqvQDIZvCNFars'})
         return MatterIterator.toModels(getData)
     }
 

@@ -8,8 +8,8 @@ export default {
     getAllMatter() {
         const listOfMatters = ref<MatterModel[]>([])
 
-        const load = () => {
-            listOfMatters.value = GetMatter.getAll()
+        const load = async () => {
+            listOfMatters.value = await GetMatter.getAll()
         }
 
         load()
